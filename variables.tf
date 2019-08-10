@@ -91,7 +91,7 @@ variable "engine_version" {
 
 variable "at_rest_encryption_enabled" {
   type        = bool
-  default     = false
+  default     = true
   description = "Enable encryption at rest"
 }
 
@@ -177,7 +177,6 @@ variable "tags" {
 variable "auth_token" {
   type        = string
   description = "Auth token for password protecting redis, `transit_encryption_enabled` must be set to `true`. Password must be longer than 16 chars"
-  default     = ""
 }
 
 variable "replication_group_id" {
