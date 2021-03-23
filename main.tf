@@ -122,7 +122,7 @@ resource "aws_cloudwatch_metric_alarm" "cache_memory" {
 }
 
 module "dns" {
-  source  = "git::https://github.com/cloudposse/terraform-aws-route53-cluster-hostname.git?ref=tags/0.3.0"
+  source  = "git::https://github.com/cloudposse/terraform-aws-route53-cluster-hostname.git?ref=tags/0.6.0"
   ttl     = 60
   zone_id = var.zone_id
   records = [join("", aws_elasticache_replication_group.default.*.primary_endpoint_address)]
